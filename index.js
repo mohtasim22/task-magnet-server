@@ -108,6 +108,7 @@ async function run() {
         const result = await cursor.toArray();
         res.send(result);
     })
+    
     app.get('/postss/:tag', async(req,res)=>{
       const tag = req.params.tag;
       console.log(tag);
