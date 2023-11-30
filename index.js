@@ -43,7 +43,6 @@ async function run() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
     // await client.connect ()
-
     const forumCollection = client.db('forumDB').collection('posts');
     const commentsCollection = client.db('forumDB').collection('comments');
     const usersCollection = client.db('forumDB').collection('users');
