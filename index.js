@@ -173,7 +173,6 @@ async function run() {
       res.send(result); 
     })
 
-    
     // forum users
     app.get('/users',async(req,res)=>{
       const cursor = usersCollection.find();
