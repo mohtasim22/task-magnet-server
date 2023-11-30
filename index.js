@@ -172,7 +172,7 @@ async function run() {
       const result = await cursor.toArray();
       res.send(result); 
     })
-    
+
     // forum users
     app.get('/users',async(req,res)=>{
       const cursor = usersCollection.find();
@@ -215,8 +215,7 @@ async function run() {
         const result = await usersCollection.updateOne(filter, post, options);
         res.send(result); 
       }
-      
-      
+           
     })
     // forum tags
     app.get('/tags',async(req,res)=>{
