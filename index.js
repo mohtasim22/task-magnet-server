@@ -151,7 +151,7 @@ async function run() {
       const result = await forumCollection.updateOne(filter, post, options);
       res.send(result); 
     })
-    
+
     // forum comment
     app.get('/comments',async(req,res)=>{
       const cursor = commentsCollection.find();
@@ -173,6 +173,7 @@ async function run() {
       res.send(result); 
     })
 
+    
     // forum users
     app.get('/users',async(req,res)=>{
       const cursor = usersCollection.find();
