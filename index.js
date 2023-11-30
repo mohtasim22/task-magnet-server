@@ -20,7 +20,7 @@ const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 
 app.use(cors({
   
-  origin: ['http://localhost:5173','http://localhost:5174','https://forumfocus-4db9e.web.app'],
+  origin: ['http://localhost:5173','http://localhost:5174','https://forumfocus-4db9e.web.app','https://forumfocus-4db9e.firebaseapp.com'],
   credentials: true,
   optionSucessStatus:200,
   methods: ['GET', 'POST', 'PUT', 'DELETE','PATCH','OPTIONS']
@@ -235,7 +235,7 @@ async function run() {
       res.send(result);
     })
 
-    
+
     // forum annoumcements
     app.get('/announcements',async(req,res)=>{
       const cursor = announcementCollection.find();
